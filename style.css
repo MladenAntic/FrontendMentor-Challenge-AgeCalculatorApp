@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Poppins", "sans-serif";
+  background: var(--off-white);
+  display: grid;
+  place-items: center;
+}
+
+#main-container {
+  width: 52.5rem;
+  height: 40.625rem;
+  background: var(--white);
+  padding: 3.125rem;
+  border-radius: 1.875rem 1.875rem 12.5rem 1.875rem;
+}
+
+.inputs-section {
+  position: relative;
+  margin-bottom: 3.125rem;
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.875rem;
+  margin-bottom: 2.5rem;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+label,
+input {
+  display: block;
+}
+
+label {
+  text-transform: uppercase;
+  color: var(--smokey-grey);
+  margin-bottom: 0.3125rem;
+}
+
+input::placeholder {
+  color: var(--smokey-grey);
+  font-weight: 800;
+}
+
+input {
+  width: 10rem;
+  padding: 0.9375rem;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.3125rem;
+  border: 0.0625rem solid var(--light-grey);
+  outline: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+}
+
+input:focus {
+  border: 0.0625rem solid var(--purple);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.error-message {
+  color: var(--light-red);
+  font-weight: 400;
+  font-style: italic;
+  position: absolute;
+
+  display: none;
+}
+
+.divider {
+  width: 100%;
+  height: 0.0625rem;
+  background: var(--light-grey);
+}
+
+.calculate-btn {
+  width: 6.25rem;
+  height: 6.25rem;
+  border: none;
+  outline: none;
+  background: var(--purple);
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 65%;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.calculate-btn:hover {
+  background: var(--off-black);
+}
+
+.calculate {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  line-height: 1.1;
+}
+
+.number {
+  font-size: 6rem;
+  color: var(--purple);
+  font-weight: 800;
+  font-style: italic;
+}
+
+.title {
+  font-size: 6rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+@media screen and (max-width: 600px) {
+  #main-container {
+    width: 90%;
+    height: 34.375rem;
+    padding: 2.1875rem;
+  }
+
+  .inputs-section {
+    margin-bottom: 4.6875rem;
+  }
+
+  .inputs {
+    margin-bottom: 4.0625rem;
+    gap: 0.9375rem;
+  }
+
+  label {
+    font-size: 0.875rem;
+  }
+
+  input {
+    width: 5rem;
+    font-size: 0.875rem;
+  }
+
+  input::placeholder {
+    font-size: 0.875rem;
+  }
+
+  .calculate-btn {
+    width: 4.6875rem;
+    height: 4.6875rem;
+    border: none;
+    outline: none;
+    background: var(--purple);
+    border-radius: 50%;
+    position: absolute;
+    right: initial;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    cursor: pointer;
+  }
+
+  .calculate {
+    line-height: 1.5;
+  }
+
+  .number,
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (width: 280px) {
+  #main-container {
+    width: 95%;
+  }
+
+  label {
+    font-size: 0.625rem;
+  }
+
+  input {
+    width: 3.75rem;
+    font-size: 0.5rem;
+  }
+
+  input::placeholder {
+    font-size: 0.5rem;
+  }
+
+  .calculate {
+    line-height: 2;
+  }
+
+  .number,
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 870px) {
+  #main-container {
+    width: 90%;
+    padding: 2.5rem;
+  }
+
+  .inputs {
+    gap: 1.25rem;
+    margin-bottom: 3.125rem;
+  }
+
+  input {
+    width: 9rem;
+  }
+
+  .calculate-btn {
+    width: 4.6875rem;
+    height: 4.6875rem;
+    top: 75%;
+  }
+
+  .calculate {
+    line-height: 1.35;
+  }
+
+  .number,
+  .title {
+    font-size: 4.5rem;
+  }
+}

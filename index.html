@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator App</title>
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="main-container">
+      <section class="inputs-section">
+        <div class="inputs">
+          <div class="day input-wrapper">
+            <label for="day">Day</label>
+            <input
+              type="text"
+              id="day"
+              placeholder="DD"
+              maxlength="2"
+              min="1"
+              max="31"
+              required
+            />
+            <small class="error-message"></small>
+          </div>
+          <div class="month input-wrapper">
+            <label for="day">Month</label>
+            <input
+              type="text"
+              id="month"
+              placeholder="MM"
+              maxlength="2"
+              required
+            />
+            <small class="error-message"></small>
+          </div>
+          <div class="year input-wrapper">
+            <label for="day">Year</label>
+            <input
+              type="text"
+              id="year"
+              placeholder="YYYY"
+              maxlength="4"
+              required
+            />
+            <small class="error-message"></small>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <button class="calculate-btn">
+          <img
+            src="images/icon-arrow.svg"
+            class="icon-arrow"
+            alt="Icon Arrow"
+          />
+        </button>
+      </section>
+
+      <section class="calculate-section">
+        <div class="calculate years">
+          <span class="number years-number">- -</span>
+          <h2 class="title">years</h2>
+        </div>
+        <div class="calculate months">
+          <span class="number months-number">- -</span>
+          <h2 class="title">months</h2>
+        </div>
+        <div class="calculate days">
+          <span class="number days-number">- -</span>
+          <h2 class="title">days</h2>
+        </div>
+      </section>
+    </main>
+    <script src="js/main.js"></script>
+    <script src="js/formatInputs.js"></script>
+    <script src="js/calculateAge.js"></script>
+  </body>
+</html>
